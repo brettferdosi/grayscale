@@ -3,22 +3,29 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8B25B14F247AC6CF00B0BBDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B25B14E247AC6CF00B0BBDD /* AppDelegate.swift */; };
-		8B25B151247AC6CF00B0BBDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B25B150247AC6CF00B0BBDD /* Assets.xcassets */; };
-		8B25B154247AC6CF00B0BBDD /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B25B152247AC6CF00B0BBDD /* MainMenu.xib */; };
+		8B1247062482248D0056CABF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B1247052482248D0056CABF /* MainMenu.xib */; };
+		8BFFB01C247ACB56009AC0A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BFFB019247ACB56009AC0A6 /* Assets.xcassets */; };
+		8BFFB020247ACBD8009AC0A6 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 8BFFB01F247ACBD8009AC0A6 /* LICENSE */; };
+		8BFFB025247ADBEA009AC0A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFFB00D247AC9DB009AC0A6 /* AppDelegate.swift */; };
+		8BFFB02C247F4D0C009AC0A6 /* UniversalAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BFFB02B247F4D0C009AC0A6 /* UniversalAccess.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B1247052482248D0056CABF /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		8B25B14B247AC6CF00B0BBDD /* grayscale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = grayscale.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8B25B14E247AC6CF00B0BBDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8B25B150247AC6CF00B0BBDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8B25B153247AC6CF00B0BBDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		8B25B155247AC6CF00B0BBDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8B25B156247AC6CF00B0BBDD /* grayscale.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = grayscale.entitlements; sourceTree = "<group>"; };
+		8BFFB00D247AC9DB009AC0A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8BFFB019247ACB56009AC0A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8BFFB01B247ACB56009AC0A6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BFFB01F247ACBD8009AC0A6 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		8BFFB021247ACBDE009AC0A6 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8BFFB026247ADCC9009AC0A6 /* Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridge.h; sourceTree = "<group>"; };
+		8BFFB029247F41E9009AC0A6 /* libUniversalAccess.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libUniversalAccess.tbd; path = usr/lib/libUniversalAccess.tbd; sourceTree = SDKROOT; };
+		8BFFB02B247F4D0C009AC0A6 /* UniversalAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UniversalAccess.framework; path = ../../../../System/Library/PrivateFrameworks/UniversalAccess.framework; sourceTree = "<group>"; };
+		8BFFB03424820DFB009AC0A6 /* grayscale.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = grayscale.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BFFB02C247F4D0C009AC0A6 /* UniversalAccess.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -35,8 +43,12 @@
 		8B25B142247AC6CF00B0BBDD = {
 			isa = PBXGroup;
 			children = (
-				8B25B14D247AC6CF00B0BBDD /* grayscale */,
+				8BFFB01F247ACBD8009AC0A6 /* LICENSE */,
+				8BFFB021247ACBDE009AC0A6 /* README.md */,
+				8BFFB017247ACB56009AC0A6 /* Resources */,
+				8BFFB00C247AC9DB009AC0A6 /* Sources */,
 				8B25B14C247AC6CF00B0BBDD /* Products */,
+				8BFFB028247F41E9009AC0A6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -48,16 +60,33 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8B25B14D247AC6CF00B0BBDD /* grayscale */ = {
+		8BFFB00C247AC9DB009AC0A6 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				8B25B14E247AC6CF00B0BBDD /* AppDelegate.swift */,
-				8B25B150247AC6CF00B0BBDD /* Assets.xcassets */,
-				8B25B152247AC6CF00B0BBDD /* MainMenu.xib */,
-				8B25B155247AC6CF00B0BBDD /* Info.plist */,
-				8B25B156247AC6CF00B0BBDD /* grayscale.entitlements */,
+				8BFFB00D247AC9DB009AC0A6 /* AppDelegate.swift */,
+				8BFFB026247ADCC9009AC0A6 /* Bridge.h */,
 			);
-			path = grayscale;
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		8BFFB017247ACB56009AC0A6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8BFFB019247ACB56009AC0A6 /* Assets.xcassets */,
+				8B1247052482248D0056CABF /* MainMenu.xib */,
+				8BFFB03424820DFB009AC0A6 /* grayscale.entitlements */,
+				8BFFB01B247ACB56009AC0A6 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8BFFB028247F41E9009AC0A6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8BFFB02B247F4D0C009AC0A6 /* UniversalAccess.framework */,
+				8BFFB029247F41E9009AC0A6 /* libUniversalAccess.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -69,7 +98,8 @@
 			buildPhases = (
 				8B25B147247AC6CF00B0BBDD /* Sources */,
 				8B25B148247AC6CF00B0BBDD /* Frameworks */,
-				8B25B149247AC6CF00B0BBDD /* Resources */,
+				8BFFB00F247ACAE8009AC0A6 /* Resources */,
+				8BFFB024247ACC50009AC0A6 /* Set Build Version and Number */,
 			);
 			buildRules = (
 			);
@@ -86,6 +116,7 @@
 		8B25B143247AC6CF00B0BBDD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1150;
 				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = "Brett Gutstein";
@@ -114,38 +145,51 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		8B25B149247AC6CF00B0BBDD /* Resources */ = {
+		8BFFB00F247ACAE8009AC0A6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B25B151247AC6CF00B0BBDD /* Assets.xcassets in Resources */,
-				8B25B154247AC6CF00B0BBDD /* MainMenu.xib in Resources */,
+				8BFFB01C247ACB56009AC0A6 /* Assets.xcassets in Resources */,
+				8BFFB020247ACBD8009AC0A6 /* LICENSE in Resources */,
+				8B1247062482248D0056CABF /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8BFFB024247ACC50009AC0A6 /* Set Build Version and Number */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+				"$(INSTALL_DIR)/$(INFOPLIST_PATH)",
+			);
+			name = "Set Build Version and Number";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "BUILD_NUMBER=$(git rev-list HEAD --count)\nBUILD_VERSION=$(git describe --tags --always --dirty)\nPLIST=\"\"\n\n# handle archiving\nif [ \"${ACTION}\" == \"install\" ]; then\n    PLIST=\"${INSTALL_DIR}/${INFOPLIST_PATH}\"\nelse\n    PLIST=\"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\nfi\n\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $BUILD_NUMBER\" \"${PLIST}\"\n/usr/libexec/PlistBuddy -c \"Set :CFBundleShortVersionString ${BUILD_VERSION#*v}\" \"${PLIST}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8B25B147247AC6CF00B0BBDD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B25B14F247AC6CF00B0BBDD /* AppDelegate.swift in Sources */,
+				8BFFB025247ADBEA009AC0A6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		8B25B152247AC6CF00B0BBDD /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8B25B153247AC6CF00B0BBDD /* Base */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		8B25B157247AC6CF00B0BBDD /* Debug */ = {
@@ -204,6 +248,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = Sources/Bridge.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -257,6 +302,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = Sources/Bridge.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
 			name = Release;
@@ -265,10 +311,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = grayscale/grayscale.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Resources/grayscale.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = grayscale/Info.plist;
+				INFOPLIST_FILE = Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -276,6 +322,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = in.gutste.grayscale;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
 			};
 			name = Debug;
 		};
@@ -283,10 +333,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = grayscale/grayscale.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Resources/grayscale.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = grayscale/Info.plist;
+				INFOPLIST_FILE = Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -294,6 +344,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = in.gutste.grayscale;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
 			};
 			name = Release;
 		};
