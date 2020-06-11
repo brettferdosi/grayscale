@@ -8,15 +8,60 @@
 
 /* Begin PBXBuildFile section */
 		8B1247062482248D0056CABF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B1247052482248D0056CABF /* MainMenu.xib */; };
+		8B36434324874E4B00F18433 /* MASShortcut.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B36433E24874D7400F18433 /* MASShortcut.framework */; };
+		8B36434424874E4B00F18433 /* MASShortcut.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8B36433E24874D7400F18433 /* MASShortcut.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8BB30B482492D06600B9039A /* ShortcutWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB30B462492D06600B9039A /* ShortcutWindowController.swift */; };
+		8BB30B492492D06600B9039A /* ShortcutWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BB30B472492D06600B9039A /* ShortcutWindow.xib */; };
 		8BFFB01C247ACB56009AC0A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BFFB019247ACB56009AC0A6 /* Assets.xcassets */; };
 		8BFFB020247ACBD8009AC0A6 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 8BFFB01F247ACBD8009AC0A6 /* LICENSE */; };
 		8BFFB025247ADBEA009AC0A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFFB00D247AC9DB009AC0A6 /* AppDelegate.swift */; };
 		8BFFB02C247F4D0C009AC0A6 /* UniversalAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BFFB02B247F4D0C009AC0A6 /* UniversalAccess.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8B36433D24874D7400F18433 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8B36433724874D7400F18433 /* MASShortcut.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0D827CD31990D4420010B8EF;
+			remoteInfo = MASShortcut;
+		};
+		8B36433F24874D7400F18433 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8B36433724874D7400F18433 /* MASShortcut.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0D827D8319910AFF0010B8EF;
+			remoteInfo = MASShortcutTests;
+		};
+		8B36434124874D7400F18433 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8B36433724874D7400F18433 /* MASShortcut.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0D827D371990D5E70010B8EF;
+			remoteInfo = Demo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8B36434524874E4B00F18433 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8B36434424874E4B00F18433 /* MASShortcut.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		8B1247052482248D0056CABF /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		8B25B14B247AC6CF00B0BBDD /* grayscale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = grayscale.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B36433724874D7400F18433 /* MASShortcut.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MASShortcut.xcodeproj; path = MASShortcut/MASShortcut.xcodeproj; sourceTree = "<group>"; };
+		8BB30B462492D06600B9039A /* ShortcutWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutWindowController.swift; sourceTree = "<group>"; };
+		8BB30B472492D06600B9039A /* ShortcutWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShortcutWindow.xib; sourceTree = "<group>"; };
 		8BFFB00D247AC9DB009AC0A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BFFB019247ACB56009AC0A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8BFFB01B247ACB56009AC0A6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -33,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B36434324874E4B00F18433 /* MASShortcut.framework in Frameworks */,
 				8BFFB02C247F4D0C009AC0A6 /* UniversalAccess.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -43,6 +89,7 @@
 		8B25B142247AC6CF00B0BBDD = {
 			isa = PBXGroup;
 			children = (
+				8B36433724874D7400F18433 /* MASShortcut.xcodeproj */,
 				8BFFB01F247ACBD8009AC0A6 /* LICENSE */,
 				8BFFB021247ACBDE009AC0A6 /* README.md */,
 				8BFFB017247ACB56009AC0A6 /* Resources */,
@@ -60,10 +107,21 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		8B36433824874D7400F18433 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8B36433E24874D7400F18433 /* MASShortcut.framework */,
+				8B36434024874D7400F18433 /* MASShortcutTests.xctest */,
+				8B36434224874D7400F18433 /* Demo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		8BFFB00C247AC9DB009AC0A6 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				8BFFB00D247AC9DB009AC0A6 /* AppDelegate.swift */,
+				8BB30B462492D06600B9039A /* ShortcutWindowController.swift */,
 				8BFFB026247ADCC9009AC0A6 /* Bridge.h */,
 			);
 			path = Sources;
@@ -74,6 +132,7 @@
 			children = (
 				8BFFB019247ACB56009AC0A6 /* Assets.xcassets */,
 				8B1247052482248D0056CABF /* MainMenu.xib */,
+				8BB30B472492D06600B9039A /* ShortcutWindow.xib */,
 				8BFFB03424820DFB009AC0A6 /* grayscale.entitlements */,
 				8BFFB01B247ACB56009AC0A6 /* Info.plist */,
 			);
@@ -100,6 +159,7 @@
 				8B25B148247AC6CF00B0BBDD /* Frameworks */,
 				8BFFB00F247ACAE8009AC0A6 /* Resources */,
 				8BFFB024247ACC50009AC0A6 /* Set Build Version and Number */,
+				8B36434524874E4B00F18433 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -137,6 +197,12 @@
 			mainGroup = 8B25B142247AC6CF00B0BBDD;
 			productRefGroup = 8B25B14C247AC6CF00B0BBDD /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 8B36433824874D7400F18433 /* Products */;
+					ProjectRef = 8B36433724874D7400F18433 /* MASShortcut.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				8B25B14A247AC6CF00B0BBDD /* grayscale */,
@@ -144,12 +210,37 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		8B36433E24874D7400F18433 /* MASShortcut.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MASShortcut.framework;
+			remoteRef = 8B36433D24874D7400F18433 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8B36434024874D7400F18433 /* MASShortcutTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = MASShortcutTests.xctest;
+			remoteRef = 8B36433F24874D7400F18433 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8B36434224874D7400F18433 /* Demo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = Demo.app;
+			remoteRef = 8B36434124874D7400F18433 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		8BFFB00F247ACAE8009AC0A6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8BFFB01C247ACB56009AC0A6 /* Assets.xcassets in Resources */,
+				8BB30B492492D06600B9039A /* ShortcutWindow.xib in Resources */,
 				8BFFB020247ACBD8009AC0A6 /* LICENSE in Resources */,
 				8B1247062482248D0056CABF /* MainMenu.xib in Resources */,
 			);
@@ -186,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BFFB025247ADBEA009AC0A6 /* AppDelegate.swift in Sources */,
+				8BB30B482492D06600B9039A /* ShortcutWindowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +404,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Resources/grayscale.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Resources/Info.plist;
@@ -334,6 +427,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Resources/grayscale.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Resources/Info.plist;

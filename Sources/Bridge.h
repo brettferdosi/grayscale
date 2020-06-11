@@ -9,6 +9,8 @@
 #ifndef Bridge_h
 #define Bridge_h
 
+#import <MASShortcut/Shortcut.h>
+
 // these don't require a private framework, but the setting isn't used
 // by system preferences and doesn't persist, e.g. through sleep.
 // it's also a slightly different grayscale filter, grays are darker

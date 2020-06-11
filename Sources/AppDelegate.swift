@@ -9,8 +9,11 @@
 import Cocoa
 import Carbon
 
+let grayscaleShortcutName = "grayscale_shortcut"
+
 var statusItem: NSStatusItem!
 var statusMenu: NSMenu!
+var shortcutWindowController: ShortcutWindowController!
 
 // logging
 enum LogLevel: Int {
@@ -26,16 +29,16 @@ func grayscaleLog(logLevel: LogLevel = .ALWAYS_PRINT, _ format: String,
     }
 }
 
+func toggleGrayscale() {
+    // console messages will complain that writing the grayscale preference in
+    // com.apple.universalaccess was rejected due to missing sandbox privileges
+    // despite this app not being sandboxed; this is a bug and grayscale mode
+    // will be toggled anyway
+    UAGrayscaleSetEnabled(!UAGrayscaleIsEnabled());
+}
+
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-
-    func toggleGrayscale() {
-        // console messages will complain that writing the grayscale preference in
-        // com.apple.universalaccess was rejected due to missing sandbox privileges
-        // despite this app not being sandboxed; this is a bug and grayscale mode
-        // will be toggled anyway
-        UAGrayscaleSetEnabled(!UAGrayscaleIsEnabled());
-    }
 
     @objc func buttonClick(_ sender: Any) {
         let event = NSApp.currentEvent!
@@ -48,6 +51,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        grayscaleLog("")
+
+        shortcutWindowController = ShortcutWindowController()
+
         statusMenu = NSMenu()
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
 
@@ -63,21 +70,29 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         statusMenu.addItem(NSMenuItem(title: "About", action: #selector(showAboutPanel(_:)), keyEquivalent: ""))
         statusMenu.addItem(NSMenuItem.separator())
-        statusMenu.addItem(NSMenuItem(title: "Preferences", action: #selector(pref(_:)), keyEquivalent: ""))
-                statusMenu.addItem(NSMenuItem.separator())
+
+        statusMenu.addItem(NSMenuItem(title: "Set Keyboard Shortcut", action: #selector(showShortcutWindow(_:)), keyEquivalent: ""))
         statusMenu.addItem(NSMenuItem.separator())
+
         statusMenu.addItem(NSMenuItem(title: "Quit", action: #selector(quit(_:)), keyEquivalent: ""))
+
+        // load previously saved shortcut, if any
+        MASShortcutBinder.shared().bindShortcut(withDefaultsKey: grayscaleShortcutName, toAction: toggleGrayscale)
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
+        grayscaleLog("")
+
+        MASShortcutMonitor.shared().unregisterAllShortcuts()
     }
-    
-    @objc func pref(_ sender: Any) {
-        
-    }
-    
+
     @objc func quit(_ sender: Any) {
         NSApp.terminate(self)
+    }
+
+    @objc func showShortcutWindow(_ sender: Any) {
+        grayscaleLog("")
+        shortcutWindowController.showWindow(sender)
     }
 
     @objc func showAboutPanel(_ sender: Any) {
@@ -99,10 +114,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         credits.addAttribute(.paragraphStyle, value: paragraphStyle,
                              range: NSRange(location: 0, length: credits.length))
 
-        // setting the activation policy and calling activate() doesn't
-        // make our app visible on the dock or make a blank window appear,
-        // but it allows our about panel to display in front of other apps
-        NSApp.setActivationPolicy(.accessory)
         NSApp.activate(ignoringOtherApps: true)
         NSApp.orderFrontStandardAboutPanel(options: [ .credits : credits ])
     }
