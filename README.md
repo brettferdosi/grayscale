@@ -12,7 +12,7 @@ Graysacle has been tested on macOS 10.15 Catalina but may also work on other ver
 
 **Install option 1: run the installer (easiset)**
 
-Download the most recent installer (`GrayscaleInstaller.pkg`) from [releases](https://github.com/brettferdosi/grayscale/releases) and run it. You will have to follow Apple's instructions for [opening an app from an unidentified developer](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac) (basically, control-click the installer, click *Open*, then click *Open* again). It will install `grayscale.app` in `/Applications`. If there is already a version of `grayscale.app` on your system, the installer will detect and overwrite it.
+Download the most recent installer (`GrayscaleInstaller.pkg`) from [releases](https://github.com/brettferdosi/grayscale/releases) and run it (click [here](https://github.com/brettferdosi/grayscale/releases/latest/download/GrayscaleInstaller.pkg) to download directly). You will have to follow Apple's instructions for [opening an app from an unidentified developer](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac) (basically, control-click the installer, click *Open*, then click *Open* again). It will install `grayscale.app` in `/Applications`. If there is already a version of `grayscale.app` on your system, the installer will detect and overwrite it.
 
 **Install option 2: build from source**
 
