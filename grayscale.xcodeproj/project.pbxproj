@@ -62,6 +62,7 @@
 		8B36433724874D7400F18433 /* MASShortcut.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MASShortcut.xcodeproj; path = MASShortcut/MASShortcut.xcodeproj; sourceTree = "<group>"; };
 		8BB30B462492D06600B9039A /* ShortcutWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutWindowController.swift; sourceTree = "<group>"; };
 		8BB30B472492D06600B9039A /* ShortcutWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShortcutWindow.xib; sourceTree = "<group>"; };
+		8BB30B4C2493C8F200B9039A /* package.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = package.sh; path = ../goftam/package.sh; sourceTree = "<group>"; };
 		8BFFB00D247AC9DB009AC0A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BFFB019247ACB56009AC0A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8BFFB01B247ACB56009AC0A6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -91,6 +92,7 @@
 			children = (
 				8B36433724874D7400F18433 /* MASShortcut.xcodeproj */,
 				8BFFB01F247ACBD8009AC0A6 /* LICENSE */,
+				8BB30B4C2493C8F200B9039A /* package.sh */,
 				8BFFB021247ACBDE009AC0A6 /* README.md */,
 				8BFFB017247ACB56009AC0A6 /* Resources */,
 				8BFFB00C247AC9DB009AC0A6 /* Sources */,
