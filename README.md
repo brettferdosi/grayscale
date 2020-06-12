@@ -16,7 +16,7 @@ Download the most recent installer (`GrayscaleInstaller.pkg`) from [releases](ht
 
 **Install option 2: build from source**
 
-Clone this git repository using `git clone --recurse-submodules` and run `xcodebuild -project grayscale.xcodeproj`. `grayscale.app` will be placed into `build/Release`.
+Clone this git repository using `git clone --recurse-submodules` and run `xcodebuild -project grayscale.xcodeproj/ -scheme grayscale -configuration Release -derivedDataPath build`. `grayscale.app` will be placed into `build/Build/Products/Release`.
 
 **Open at login**
 
