@@ -3,6 +3,20 @@
 <plist version="1.0">
 <dict>
 	<key>com.apple.security.app-sandbox</key>
-	<false/>
+	<true/>
+	<key>com.apple.security.temporary-exception.mach-lookup.global-name</key>
+	<array>
+		<string>com.apple.universalaccessd.running</string>
+		<string>com.apple.universalaccessd.startup</string>
+	</array>
+	<key>com.apple.security.temporary-exception.sbpl</key>
+	<array>
+		<string>(allow distributed-notification-post)</string>
+	</array>
+	<key>com.apple.security.temporary-exception.files.home-relative-path.read-write</key>
+	<array>
+		<string>/Library/Preferences/com.apple.universalaccess.plist</string>
+		<string>/Library/Preferences/com.apple.mediaaccessibility.plist</string>
+	</array>
 </dict>
 </plist>
