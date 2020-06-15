@@ -16,9 +16,9 @@ Download the most recent installer (`GrayscaleInstaller.pkg`) from [releases](ht
 
 **Install option 2: build from source**
 
-Clone this git repository using `git clone --recurse-submodules` and run `xcodebuild -project grayscale.xcodeproj/ -scheme grayscale -configuration Release -derivedDataPath build`. `grayscale.app` will be placed into `build/Build/Products/Release`.
+Clone this git repository using `git clone --recurse-submodules` and run `xcodebuild -project grayscale.xcodeproj -scheme grayscale -configuration Release -derivedDataPath build`. `grayscale.app` will be placed into `build/Build/Products/Release`.
 
-**Open at login**
+**Optional: open at login**
 
 Automatically open grayscale at login by following Apple's instructions [here](https://support.apple.com/guide/mac-help/open-items-automatically-when-you-log-in-mh15189/mac) (add grayscale to the list in System Preferences > Users & Groups > Login Items).
 
@@ -26,16 +26,6 @@ Automatically open grayscale at login by following Apple's instructions [here](h
 
 Left click the menu bar icon to toggle the system grayscale filter. Right click the menu bar icon to access the application's menu. From the menu, select Set Keyboard Shortcut then click on the Record Shortcut button to set a global keyboard shortcut for toggling the filter.
 
-## Known issues
+## Troubleshooting
 
-The system reports sandbox-related error messages when the app attempts to update the grayscale key in the `com.apple.universalaccess` preferences file (used by the system to track grayscale filter state), even though the grayscale app is not sandboxed:
-
-```
-sandboxd - Sandbox: grayscale(27954) System Policy: deny(1) file-write-data /Users/brett/Library/Preferences/com.apple.universalaccess.plist
-
-cfprefsd - rejecting write of key(s) grayscale in { com.apple.universalaccess, brett, kCFPreferencesAnyHost, no container, managed: 0 } from process 27954 (grayscale) because setting preferences outside an application's container requires user-preference-write or file-write-data sandbox access
-
-grayscale - Couldn't write values for keys ( grayscale ) in CFPrefsPlistSource<0x600002c03880> (Domain: com.apple.universalaccess, User: kCFPreferencesCurrentUser, ByHost: No, Container: (null), Contents Need Refresh: No): setting preferences outside an application's container requires user-preference-write or file-write-data sandbox access
-```
-
-This seems to be a bug outside of the application, and despite these error messages, the grayscale filter toggles successfully. I have occasionally noticed grayscale toggling get stuck and stop working via the app, usually after significant system uptime. I have not diagnosed the cause of this behavior, but it may be related to sleep, other power events, or night shift. To get toggling working via the app again, simply toggle the grayscale filter manually from the preferences pane by going to System Preferences > Accessibility > Display > Color Filters.
+This app uses reverse-engineered private frameworks to toggle the grayscale filter (see `Sources/Bridge.h` for details). If you notice any abnormal behavior, please open an issue with as much information as possible, and I will do my best to fix it. If grayscale toggling via the app stops working, you may be able to get it working again by manually toggling the grayscale filter once in System Preferences > Accessibility > Display > Color Filters.

@@ -29,12 +29,17 @@ func grayscaleLog(logLevel: LogLevel = .ALWAYS_PRINT, _ format: String,
     }
 }
 
+// see Sources/Bridge.h for information about toggling grayscale
 func toggleGrayscale() {
-    // console messages will complain that writing the grayscale preference in
-    // com.apple.universalaccess was rejected due to missing sandbox privileges
-    // despite this app not being sandboxed; this is a bug and grayscale mode
-    // will be toggled anyway
-    UAGrayscaleSetEnabled(!UAGrayscaleIsEnabled());
+    let enabled = MADisplayFilterPrefGetCategoryEnabled(SYSTEM_FILTER) &&
+                 (MADisplayFilterPrefGetType(SYSTEM_FILTER) == GRAYSCALE_TYPE)
+    if enabled {
+        MADisplayFilterPrefSetCategoryEnabled(SYSTEM_FILTER, false)
+    } else {
+        MADisplayFilterPrefSetType(SYSTEM_FILTER, GRAYSCALE_TYPE)
+        MADisplayFilterPrefSetCategoryEnabled(SYSTEM_FILTER, true)
+    }
+    _UniversalAccessDStart(UNIVERSALACCESSD_MAGIC)
 }
 
 @NSApplicationMain
