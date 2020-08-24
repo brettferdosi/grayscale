@@ -2,7 +2,7 @@
 
 # grayscale
 
-Grayscale is a menu bar app for macOS that allows you to easily toggle the grayscale display filter. To my knowledge, it is the first app to tie in with the system grayscale filter present in modern versions of macOS. This means that it works seamessly with configuration options in System Preferences, and enabling or disabling grayscale will persist through sleep and shutdown. To learn why you may want to enable the grayscale filter, you can check out the following links:
+Grayscale is a menu bar app for macOS that allows you to easily toggle the grayscale display filter. To my knowledge, it is the first app to tie in with the system grayscale filter present in modern versions of macOS. This means that it works seamlessly with configuration options in System Preferences, and enabling or disabling grayscale will persist through sleep and shutdown. To learn why you may want to enable the grayscale filter, you can check out the following links:
 
 - https://www.nytimes.com/2018/01/12/technology/grayscale-phone.html
 - https://blog.mozilla.org/internetcitizen/2018/02/13/grayscale/
