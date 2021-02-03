@@ -2,14 +2,22 @@
 
 # grayscale
 
-Grayscale is a menu bar app for macOS that allows you to easily toggle the grayscale display filter. To my knowledge, it is the first app to tie in with the system grayscale filter present in modern versions of macOS. This means that it works seamlessly with configuration options in System Preferences, and enabling or disabling grayscale will persist through sleep and shutdown. To learn why you may want to enable the grayscale filter, you can check out the following links:
+`grayscale` is a macOS status bar app for managing the system grayscale display filter. It allows you to toggle grayscale mode easily by clicking the status bar icon or using a keyboard shortcut, and it also supports enabling or disabling grayscale based on which application is currently active.
+
+Using the grayscale filter can be effective in reducing screen time. For more information, check out the following links:
 
 - https://www.nytimes.com/2018/01/12/technology/grayscale-phone.html
 - https://blog.mozilla.org/internetcitizen/2018/02/13/grayscale/
 
 <img src="https://github.com/brettferdosi/grayscale/raw/doc/demo.png">
 
-Graysacle has been tested on macOS 10.15 Catalina but may also work on other versions. 
+`grayscale` has been tested on macOS 11 Big Sur but may also work on other versions. 
+
+## Using grayscale
+
+`grayscale` enables or disables grayscale mode based on the active application. It stores a a default grayscale value, which determines whether grayscale mode should be on or off for all applications that have not overridden it. To toggle the default value, you can left click the status bar icon or use a keyboard shortcut. Right-clicking the icon brings up a menu, which allows you to view the default value, override it for the active application, and configure the keyboard shortcut.
+
+`grayscale` is designed to make using grayscale mode practical. It's not realistic to keep your screen in grayscale all the time, and automatic transitions reduce the burden of manually turing it on and off. I recommend enabling grayscale by default and disabling it for specific applications that benefit from colors but don't use them to capture your attention, like a text editor with syntax highlighting. Potentially addictive applications that sometimes need color, like web browsers, can then be used with the default setting (i.e. with grayscale enabled), and you can use the keyboard shortcut to toggle grayscale as necessary.
 
 ## Installing grayscale
 
@@ -24,11 +32,3 @@ Clone this git repository using `git clone --recurse-submodules` and run `xcodeb
 **Optional: open at login**
 
 Automatically open grayscale at login by following Apple's instructions [here](https://support.apple.com/guide/mac-help/open-items-automatically-when-you-log-in-mh15189/mac) (add grayscale to the list in System Preferences > Users & Groups > Login Items).
-
-## Using grayscale
-
-Left click the menu bar icon to toggle the system grayscale filter. Right click the menu bar icon to access the application's menu. From the menu, select Set Keyboard Shortcut then click on the Record Shortcut button to set a global keyboard shortcut for toggling the filter.
-
-## Troubleshooting
-
-This app uses reverse-engineered private frameworks to toggle the grayscale filter (see `Sources/Bridge.h` for details). If you notice any abnormal behavior, please open an issue with as much information as possible, and I will do my best to fix it. If grayscale toggling via the app stops working, you may be able to get it working again by manually toggling the grayscale filter once in System Preferences > Accessibility > Display > Color Filters.

@@ -11,6 +11,8 @@
 		8B36434324874E4B00F18433 /* MASShortcut.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B36433E24874D7400F18433 /* MASShortcut.framework */; };
 		8B36434424874E4B00F18433 /* MASShortcut.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8B36433E24874D7400F18433 /* MASShortcut.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8B98DE20249743D20004DBCB /* libUniversalAccess.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B98DE1A249743960004DBCB /* libUniversalAccess.dylib */; };
+		8BA8EEDD25C7B08C008BA33F /* Grayscale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA8EEDC25C7B08C008BA33F /* Grayscale.swift */; };
+		8BA8EEE225C7B0E1008BA33F /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA8EEE125C7B0E1008BA33F /* Logging.swift */; };
 		8BB30B482492D06600B9039A /* ShortcutWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB30B462492D06600B9039A /* ShortcutWindowController.swift */; };
 		8BB30B492492D06600B9039A /* ShortcutWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BB30B472492D06600B9039A /* ShortcutWindow.xib */; };
 		8BB30B58249416FD00B9039A /* MediaAccessibility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BB30B54249416FD00B9039A /* MediaAccessibility.framework */; };
@@ -63,6 +65,8 @@
 		8B25B14B247AC6CF00B0BBDD /* grayscale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = grayscale.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B36433724874D7400F18433 /* MASShortcut.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MASShortcut.xcodeproj; path = MASShortcut/MASShortcut.xcodeproj; sourceTree = "<group>"; };
 		8B98DE1A249743960004DBCB /* libUniversalAccess.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libUniversalAccess.dylib; path = /usr/lib/libUniversalAccess.dylib; sourceTree = "<absolute>"; };
+		8BA8EEDC25C7B08C008BA33F /* Grayscale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grayscale.swift; sourceTree = "<group>"; };
+		8BA8EEE125C7B0E1008BA33F /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 		8BB30B462492D06600B9039A /* ShortcutWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutWindowController.swift; sourceTree = "<group>"; };
 		8BB30B472492D06600B9039A /* ShortcutWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShortcutWindow.xib; sourceTree = "<group>"; };
 		8BB30B4C2493C8F200B9039A /* package.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = package.sh; path = ../goftam/package.sh; sourceTree = "<group>"; };
@@ -131,6 +135,8 @@
 				8BFFB00D247AC9DB009AC0A6 /* AppDelegate.swift */,
 				8BB30B462492D06600B9039A /* ShortcutWindowController.swift */,
 				8BFFB026247ADCC9009AC0A6 /* Bridge.h */,
+				8BA8EEDC25C7B08C008BA33F /* Grayscale.swift */,
+				8BA8EEE125C7B0E1008BA33F /* Logging.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -188,7 +194,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1150;
+				LastUpgradeCheck = 1220;
 				ORGANIZATIONNAME = "Brett Gutstein";
 				TargetAttributes = {
 					8B25B14A247AC6CF00B0BBDD = {
@@ -286,8 +292,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BA8EEDD25C7B08C008BA33F /* Grayscale.swift in Sources */,
 				8BFFB025247ADBEA009AC0A6 /* AppDelegate.swift in Sources */,
 				8BB30B482492D06600B9039A /* ShortcutWindowController.swift in Sources */,
+				8BA8EEE225C7B0E1008BA33F /* Logging.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +328,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -381,6 +390,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;

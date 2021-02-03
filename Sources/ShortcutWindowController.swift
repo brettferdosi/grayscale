@@ -13,6 +13,17 @@ class ShortcutWindowController: NSWindowController {
     @IBOutlet weak var shortcutView: MASShortcutView!
 
     var shortcut: MASShortcut?
+    var action: () -> Void
+
+    init(_ inputAction: @escaping () -> Void) {
+        action = inputAction
+        super.init(window: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        self.action = {}
+        super.init(coder: coder)
+    }
 
     override func windowDidLoad() {
         super.windowDidLoad()
@@ -24,7 +35,7 @@ class ShortcutWindowController: NSWindowController {
                 return
             }
             self.shortcut = shortcutValue
-            MASShortcutMonitor.shared().register(self.shortcut, withAction: toggleGrayscale)
+            MASShortcutMonitor.shared().register(self.shortcut, withAction: self.action)
         }
     }
 

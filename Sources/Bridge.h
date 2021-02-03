@@ -52,8 +52,8 @@ extern void  MADisplayFilterPrefSetCategoryEnabled(int filter, _Bool enable);
 extern int MADisplayFilterPrefGetType(int filter);
 extern void MADisplayFilterPrefSetType(int filter, int type);
 
-int SYSTEM_FILTER = 0x1;
-int GRAYSCALE_TYPE = 0x1;
+int __attribute__((weak)) SYSTEM_FILTER = 0x1;
+int __attribute__((weak)) GRAYSCALE_TYPE = 0x1;
 
 // --
 
@@ -74,7 +74,7 @@ int GRAYSCALE_TYPE = 0x1;
 
 extern void _UniversalAccessDStart(int magic);
 
-int UNIVERSALACCESSD_MAGIC = 0x8;
+int __attribute__((weak)) UNIVERSALACCESSD_MAGIC = 0x8;
 
 // --
 

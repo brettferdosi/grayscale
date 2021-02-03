@@ -33,6 +33,6 @@
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 	<key>NSSupportsSuddenTermination</key>
-	<true/>
+	<false/>
 </dict>
 </plist>
