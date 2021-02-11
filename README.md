@@ -21,11 +21,27 @@ Using the grayscale filter can be effective in reducing screen time. For more in
 
 ## Installing grayscale
 
-**Install option 1: run the installer (easiset)**
+**Note:** if you aren't building from source, you will have to follow Apple's
+instructions for [opening an app from an unidentified
+developer](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac)
+(basically, control-click, click *Open*, then click *Open* again) to open either
+the application or the installer pkg for the first time.
 
-Download the most recent installer (`GrayscaleInstaller.pkg`) from [releases](https://github.com/brettferdosi/grayscale/releases) and run it (click [here](https://github.com/brettferdosi/grayscale/releases/latest/download/GrayscaleInstaller.pkg) to download directly). You will have to follow Apple's instructions for [opening an app from an unidentified developer](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac) (basically, control-click the installer, click *Open*, then click *Open* again). It will install `grayscale.app` in `/Applications`. If there is already a version of `grayscale.app` on your system, the installer will detect and overwrite it.
+**Install option 1: homebrew**
 
-**Install option 2: build from source**
+Run `brew install --cask brettferdosi/tap/grayscale`. `grayscale.app` will be
+installed in `/Applications`.
+
+**Install option 2: run the installer (easiset for non-technical users)**
+
+Download the most recent installer (`GrayscaleInstaller.pkg`) from
+[releases](https://github.com/brettferdosi/grayscale/releases) and run it (click
+[here](https://github.com/brettferdosi/grayscale/releases/latest/download/GrayscaleInstaller.pkg)
+to download directly). It will install `grayscale.app` in `/Applications`.  If
+there is already a version of `grayscale.app` on your system, the installer will
+detect and overwrite it.
+
+**Install option 3: build from source**
 
 Clone this git repository using `git clone --recurse-submodules` and run `xcodebuild -project grayscale.xcodeproj -scheme grayscale -configuration Release -derivedDataPath build`. `grayscale.app` will be placed into `build/Build/Products/Release`.
 
