@@ -4,8 +4,9 @@
 
 `grayscale` is a macOS status bar app for managing the system grayscale display filter. It allows you to toggle grayscale mode easily by clicking the status bar icon or using a keyboard shortcut, and it also supports enabling or disabling grayscale based on which application is currently active.
 
-Using the grayscale filter can be effective in reducing screen time. For more information, check out the following links:
+Using the grayscale filter can help you reduce your screen time. For more information, check out the following links:
 
+- https://brett.gutste.in/pages/yut#black-white-and-read-all-over
 - https://www.nytimes.com/2018/01/12/technology/grayscale-phone.html
 - https://blog.mozilla.org/internetcitizen/2018/02/13/grayscale/
 
