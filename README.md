@@ -6,7 +6,6 @@
 
 Using the grayscale filter can help you reduce your screen time. For more information, check out the following links:
 
-- https://brett.gutste.in/pages/yut#black-white-and-read-all-over
 - https://www.nytimes.com/2018/01/12/technology/grayscale-phone.html
 - https://blog.mozilla.org/internetcitizen/2018/02/13/grayscale/
 
