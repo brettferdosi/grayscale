@@ -23,6 +23,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		8B2A63FF2975C96C0067EC3C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8B36433724874D7400F18433 /* MASShortcut.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 0D827CD21990D4420010B8EF;
+			remoteInfo = MASShortcut;
+		};
 		8B36433D24874D7400F18433 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8B36433724874D7400F18433 /* MASShortcut.xcodeproj */;
@@ -180,6 +187,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				8B2A64002975C96C0067EC3C /* PBXTargetDependency */,
 			);
 			name = grayscale;
 			productName = grayscale;
@@ -300,6 +308,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8B2A64002975C96C0067EC3C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MASShortcut;
+			targetProxy = 8B2A63FF2975C96C0067EC3C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		8B25B157247AC6CF00B0BBDD /* Debug */ = {
