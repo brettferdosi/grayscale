@@ -19,6 +19,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     // application state management
 
     var currentApplication: NSRunningApplication!
+    var currentApplicationBundleIdentifier: String? { currentApplication.bundleIdentifier }
     var defaultGrayscaleEnabled: Bool = false
     var perAppGrayscaleEnabledDict: [String: Bool] = [:]
 
@@ -61,25 +62,33 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     @objc func appSpecificMenuClick(_ sender: Any) {
+        defer {
+            updateUI()
+        }
+
+        guard let bundleIdentifier = currentApplicationBundleIdentifier else {
+            grayscaleLog("unknown")
+
+            return
+        }
+
         let senderObject = sender as! NSObject
         if senderObject == appSpecificSubMenuItemGrayscaleDefault {
             grayscaleLog("default")
-            perAppGrayscaleEnabledDict.removeValue(forKey: currentApplication.bundleIdentifier!)
+            perAppGrayscaleEnabledDict.removeValue(forKey: bundleIdentifier)
         }
 
         if senderObject == appSpecificSubMenuItemGrayscaleEnabled {
             grayscaleLog("enabled")
-            perAppGrayscaleEnabledDict[currentApplication.bundleIdentifier!] = true
+            perAppGrayscaleEnabledDict[bundleIdentifier] = true
         }
 
         if senderObject == appSpecificSubMenuItemGrayscaleDisabled {
             grayscaleLog("disabled")
-            perAppGrayscaleEnabledDict[currentApplication.bundleIdentifier!] = false
+            perAppGrayscaleEnabledDict[bundleIdentifier] = false
         }
 
         UserDefaults.standard.setValue(perAppGrayscaleEnabledDict, forKey: perAppGrayscaleEnabledDictName)
-
-        updateUI()
     }
 
     func toggleDefaultGrayscale() {
@@ -107,7 +116,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         defaultGrayscaleMenuItem.title = defaultGrayscaleEnabled ? "Grayscale Default: Enabled" : "Grayscale Default: Disabled"
         appSpecificMenuItem.title = currentApplication.localizedName!
 
-        if let appSpecificEnableGrayscale = perAppGrayscaleEnabledDict[currentApplication.bundleIdentifier!] {
+        if let bundleIdentifier = currentApplicationBundleIdentifier,
+           let appSpecificEnableGrayscale = perAppGrayscaleEnabledDict[bundleIdentifier] {
             if appSpecificEnableGrayscale {
                 // grayscale is enabled for this app
                 updateAppSpecificSubMenu(.ENABLED)
