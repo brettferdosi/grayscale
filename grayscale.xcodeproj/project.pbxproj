@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 53;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -180,9 +180,9 @@
 			buildPhases = (
 				8B25B147247AC6CF00B0BBDD /* Sources */,
 				8B25B148247AC6CF00B0BBDD /* Frameworks */,
+				8B36434524874E4B00F18433 /* Embed Frameworks */,
 				8BFFB00F247ACAE8009AC0A6 /* Resources */,
 				8BFFB024247ACC50009AC0A6 /* Set Build Version and Number */,
-				8B36434524874E4B00F18433 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
