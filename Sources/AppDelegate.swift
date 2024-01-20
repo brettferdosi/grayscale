@@ -62,6 +62,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     @objc func appSpecificMenuClick(_ sender: Any) {
+        defer {
+            updateUI()
+        }
+
         guard let bundleIdentifier = currentApplicationBundleIdentifier else {
             grayscaleLog("unknown")
 
@@ -85,8 +89,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
 
         UserDefaults.standard.setValue(perAppGrayscaleEnabledDict, forKey: perAppGrayscaleEnabledDictName)
-
-        updateUI()
     }
 
     func toggleDefaultGrayscale() {
